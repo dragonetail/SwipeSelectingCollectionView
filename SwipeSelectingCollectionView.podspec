@@ -9,14 +9,14 @@ This collection view subclass is capable of selecting multiple cells with swipe.
 Inspired by Photos app in iOS 9+.
                    DESC
 
-  s.homepage     = "https://github.com/ShaneQi/SwipeSelectingCollectionView"
+  s.homepage     = "https://github.com/dragonetail/SwipeSelectingCollectionView"
   s.license      = "Apache License 2.0"
 
-  s.author             = { "Shane Qi" => "qizengtai@gmail.com" }
-  s.social_media_url   = "http://twitter.com/shadowqi"
+  s.author             = { "dragonetail" => "dragonetail@gmail.com" }
+  s.social_media_url   = "http://dragonetail.github.io/"
 
-  s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/ShaneQi/SwipeSelectingCollectionView.git", :tag => "#{s.version}" }
+  s.platform     = :ios, "10.3"
+  s.source       = { :git => "https://github.com/dragonetail/SwipeSelectingCollectionView.git", :tag => "#{s.version}" }
 
   s.source_files  = "Sources"
 
