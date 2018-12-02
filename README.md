@@ -50,6 +50,7 @@ Delegate when the tap event recognized. If the cell was seleced, deselect the ce
 extension ViewController: SwipeUICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtByTapped indexPath: IndexPath) {
         print("didSelectItemAtByTapped: \(indexPath)")
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
     }
 }
 ```
