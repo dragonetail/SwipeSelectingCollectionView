@@ -1,16 +1,17 @@
-# SwipeSelectingCollectionView
-> A collection view subclass that enables swipe to select multiple cells just like in Photos app.
+# SwipeSelectingCollectionView2
+> A collection view subclass that enables swipe(finger over) to select multiple cells just like in Photos app.  
+This project is derived from SwipeSelectingCollectionView(https://github.com/ShaneQi/SwipeSelectingCollectionView)
 
 [![Swift Version](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org/)
-[![Swift Version](https://img.shields.io/badge/iOS-8.0-green.svg)](https://www.apple.com/ios/ios-11/)
+[![Swift Version](https://img.shields.io/badge/iOS-11.0-green.svg)](https://www.apple.com/ios/ios-11/)
 
 ![](./Assets/demo.gif)
 
 ## Requirements
 
-- Swift 4.0
-- iOS 8.0+
-- Xcode 7.3
+- Swift 4.2
+- iOS 11.0+
+- Xcode 10.1
 
 ## Installation
 
@@ -18,9 +19,9 @@
 You can use [CocoaPods](http://cocoapods.org/) to install `SwipeSelectingCollectionView` by adding it to your `Podfile`:
 
 ```ruby
-platform :ios, '8.0'
+platform :ios, '11.0'
 use_frameworks!
-pod 'SwipeSelectingCollectionView'
+pod 'SwipeSelectingCollectionView2'
 ```
 
 To get the full benefits import `SwipeSelectingCollectionView` wherever you import UIKit
@@ -41,7 +42,16 @@ import SwipeSelectingCollectionView
 ```swift
 import SwipeSelectingCollectionView
 
-let collectionView = CollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()) 
+let collectionView = SwipeSelectingCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()) 
+```
+#### Added SwipeUICollectionViewDelegate  
+Delegate when the tap event recognized. If the cell was seleced, deselect the cell item and trigger the delegation *didDeselectItemAt*, otherwise just trigger the *didSelectItemAtByTapped* in *SwipeUICollectionViewDelegate* like blow.    
+```swift
+extension ViewController: SwipeUICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAtByTapped indexPath: IndexPath) {
+        print("didSelectItemAtByTapped: \(indexPath)")
+    }
+}
 ```
 
 #### Interface Builder
@@ -54,8 +64,12 @@ We would love you for the contribution to **SwipeSelectingCollectionView**, chec
 
 ## Meta
 
+### Original Auther:
 Shane Qi – [@shadowqi](https://twitter.com/shadowqi) – qizengtai@gmail.com
+
+### Updated by:
+dragonetail – dragonetail@gmail.com  
 
 Distributed under the Apache License 2.0. See ``LICENSE`` for more information.
 
-[https://github.com/shaneqi/SwipeSelectingCollectionView](https://github.com/shaneqi/SwipeSelectingCollectionView)
+[https://github.com/shaneqi/SwipeSelectingCollectionView2](https://github.com/shaneqi/SwipeSelectingCollectionView2)
