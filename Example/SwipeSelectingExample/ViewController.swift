@@ -69,6 +69,7 @@ extension ViewController: UICollectionViewDelegate {
 extension ViewController: SwipeUICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtByTapped indexPath: IndexPath) {
         print("didSelectItemAtByTapped: \(indexPath)")
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
     }
 }
 

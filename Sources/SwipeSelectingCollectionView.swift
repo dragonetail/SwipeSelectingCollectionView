@@ -164,16 +164,16 @@ public class SwipeSelectingCollectionView: UICollectionView {
 
     @objc private func didTapGestureRecognizerChange(tapGestureRecognizer: UITapGestureRecognizer) {
         let point = tapGestureRecognizer.location(in: self)
-        let indexPath = self.indexPathForItem(at: point)
-        if indexPath == nil {
-            return
+        guard let indexPath = self.indexPathForItem(at: point),
+            let isSelected = cellForItem(at: indexPath)?.isSelected else {
+                return
         }
 
-        if let _ = cellForItem(at: indexPath!)?.isSelected {
-            setSelection(false, indexPath: indexPath!)
+        if isSelected {
+            setSelection(false, indexPath: indexPath)
         } else {
             if let delegate = delegate as? SwipeUICollectionViewDelegate {
-                delegate.collectionView?(self, didSelectItemAtByTapped: indexPath!)
+                delegate.collectionView?(self, didSelectItemAtByTapped: indexPath)
             }
         }
     }
