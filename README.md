@@ -47,6 +47,8 @@ let collectionView = SwipeSelectingCollectionView(frame: .zero, collectionViewLa
 #### Added SwipeUICollectionViewDelegate  
 Delegate when the tap event recognized. If the cell was seleced, deselect the cell item and trigger the delegation *didDeselectItemAt*, otherwise just trigger the *didSelectItemAtByTapped* in *SwipeUICollectionViewDelegate* like blow.    
 ```swift
+import SwipeSelectingCollectionView2
+
 extension ViewController: SwipeUICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtByTapped indexPath: IndexPath) {
         print("didSelectItemAtByTapped: \(indexPath)")
