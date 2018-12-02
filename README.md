@@ -2,7 +2,7 @@
 > A collection view subclass that enables swipe(finger over) to select multiple cells just like in Photos app.  
 This project is derived from SwipeSelectingCollectionView(https://github.com/ShaneQi/SwipeSelectingCollectionView)
 
-[![Swift Version](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org/)
+[![Swift Version](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://swift.org/)
 [![Swift Version](https://img.shields.io/badge/iOS-9.0-green.svg)](https://www.apple.com/ios/ios-9/)
 
 ![](./Assets/demo.gif)
