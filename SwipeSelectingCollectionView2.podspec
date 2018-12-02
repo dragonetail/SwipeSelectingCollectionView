@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwipeSelectingCollectionView2"
-  s.version      = "0.1.6"
+  s.version      = "0.1.7"
   s.summary      = "A collection view subclass that enables swipe(finger over) to select multiple cells just like in Photos app."
 
   s.description  = <<-DESC
@@ -15,7 +15,7 @@ Inspired by Photos app in iOS 9+, derived from SwipeSelectingCollectionView(http
   s.author             = { "dragonetail" => "dragonetail@gmail.com" }
   s.social_media_url   = "http://dragonetail.github.io/"
 
-  s.platform     = :ios, "10.3"
+  s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/dragonetail/SwipeSelectingCollectionView2.git", :tag => "#{s.version}" }
 
   s.source_files  = "Sources"

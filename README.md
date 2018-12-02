@@ -3,14 +3,14 @@
 This project is derived from SwipeSelectingCollectionView(https://github.com/ShaneQi/SwipeSelectingCollectionView)
 
 [![Swift Version](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org/)
-[![Swift Version](https://img.shields.io/badge/iOS-11.0-green.svg)](https://www.apple.com/ios/ios-11/)
+[![Swift Version](https://img.shields.io/badge/iOS-9.0-green.svg)](https://www.apple.com/ios/ios-9/)
 
 ![](./Assets/demo.gif)
 
 ## Requirements
 
 - Swift 4.2
-- iOS 11.0+
+- iOS 9.0+
 - Xcode 10.1
 
 ## Installation
