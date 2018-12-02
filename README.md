@@ -24,11 +24,11 @@ use_frameworks!
 pod 'SwipeSelectingCollectionView2'
 ```
 
-To get the full benefits import `SwipeSelectingCollectionView` wherever you import UIKit
+To get the full benefits import `SwipeSelectingCollectionView2` wherever you import UIKit
 
 ``` swift
 import UIKit
-import SwipeSelectingCollectionView
+import SwipeSelectingCollectionView2
 ```
 
 #### Manually
@@ -40,7 +40,7 @@ import SwipeSelectingCollectionView
 #### Programmatically
 
 ```swift
-import SwipeSelectingCollectionView
+import SwipeSelectingCollectionView2
 
 let collectionView = SwipeSelectingCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()) 
 ```
