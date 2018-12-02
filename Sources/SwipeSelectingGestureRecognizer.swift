@@ -1,39 +1,38 @@
-//
-//  SwipeSelectingGestureRecognizer.swift
-//  TileTime
-//
-//  Created by Shane Qi on 7/9/17.
-//  Copyright © 2017 Shane Qi. All rights reserved.
-//
-
 import UIKit
 import UIKit.UIGestureRecognizerSubclass
 
 class SwipeSelectingGestureRecognizer: UIPanGestureRecognizer {
 
-	private var beginPoint: CGPoint?
+    //辅助判断初始的动向是横向还是竖向
+	private var startPoint: CGPoint?
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
 		super.touchesBegan(touches, with: event)
-		beginPoint = touches.first?.location(in: self.view)
+		startPoint = touches.first?.location(in: self.view)
+        print("~~~touchesBegan标记: \(String(describing: startPoint)))")
 	}
 
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
 		defer {
 			super.touchesMoved(touches, with: event)
-			self.beginPoint = nil
+			self.startPoint = nil
 		}
 		guard let view = self.view,
 			let touchPoint = touches.first?.location(in: view),
-			let beginPoint = self.beginPoint else {
+			let startPoint = self.startPoint else {
+                //print("touchesMoved标记: \(String(describing: self.startPoint)) -> \(String(describing: touches.first?.location(in: self.view)))")
 				return
 		}
-		let deltaY = abs(beginPoint.y - touchPoint.y)
-		let deltaX = abs(beginPoint.x - touchPoint.x)
+        
+        //辅助判断初始的动向是横向还是竖向
+		let deltaY = abs(startPoint.y - touchPoint.y)
+		let deltaX = abs(startPoint.x - touchPoint.x)
 		if deltaY != 0 && deltaY / deltaX > 1 {
 			state = .failed
+            //print("touchesMoved标记state = .failed")
 			return
 		}
+        //print("touchesMoved正常结束")
 	}
 
 }
