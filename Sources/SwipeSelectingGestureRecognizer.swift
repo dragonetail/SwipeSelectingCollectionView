@@ -9,7 +9,6 @@ class SwipeSelectingGestureRecognizer: UIPanGestureRecognizer {
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
 		super.touchesBegan(touches, with: event)
 		startPoint = touches.first?.location(in: self.view)
-        print("touchesBegan: \(String(describing: startPoint)))")
 	}
 
 	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
@@ -17,11 +16,9 @@ class SwipeSelectingGestureRecognizer: UIPanGestureRecognizer {
 			super.touchesMoved(touches, with: event)
 			self.startPoint = nil
 		}
-        //print("touchesMoved...")
 		guard let view = self.view,
 			let touchPoint = touches.first?.location(in: view),
 			let startPoint = self.startPoint else {
-                //print("touchesMoved: \(String(describing: self.startPoint)) -> \(String(describing: touches.first?.location(in: self.view)))")
 				return
 		}
         
@@ -30,10 +27,8 @@ class SwipeSelectingGestureRecognizer: UIPanGestureRecognizer {
 		let deltaX = abs(startPoint.x - touchPoint.x)
 		if deltaY != 0 && deltaY / deltaX > 1 {
 			state = .failed
-            //print("touchesMoved state = .failed")
 			return
 		}
-        //print("touchesMoved~~~")
 	}
 
 }
